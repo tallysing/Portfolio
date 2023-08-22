@@ -31,7 +31,7 @@ nav ul li a{
 p {
     max-width: 75ch;
 }
-header {
+.title {
     font-size: 1.88rem; /* 30px */
     margin-top: 0.67em; /* 20px/30px base */
     /* background: url("../img/cloud_background.png");
@@ -49,4 +49,11 @@ article{
 }
 figure {
     flex-basis: 35%;
+}
+figure img {
+    width: 100%;
+    border-radius: 0.94em;
+}
+article header{
+    flex-basis: 60%;
 }
