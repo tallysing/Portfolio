@@ -71,6 +71,8 @@ h2{
     flex-direction: column;
 }
 figcaption {
+    display: flex;
+    justify-content: space-between;
     padding: 0.5ch;
 }
 table {
@@ -96,4 +98,13 @@ figure img{
 figure {
     margin-top: 2em;
     border-radius: 0.94em;
+}
+details {
+    border-radius: 0.25em;
+}
+summary{
+    cursor: pointer;
+}
+details[open] {
+    width: 23vw;
 }
