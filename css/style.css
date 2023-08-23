@@ -61,15 +61,16 @@ article{
 article p{
     padding: 1ch;
 }
-article h2{
+h2{
     text-align: center;
+    padding: 0.5ch;
 }
 #experience {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-h2 {
+figcaption {
     padding: 0.5ch;
 }
 table {
@@ -78,4 +79,21 @@ table {
 td, th {
     padding: 0.5ch;
     text-align: center;
+}
+#portfolio{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#portfolio h2 {
+    flex-basis: 100%;
+}
+figure img{
+
+    width: 23vw;
+    max-height: 18.75em;
+}
+figure {
+    margin-top: 2em;
+    border-radius: 0.94em;
 }
