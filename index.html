@@ -10,29 +10,95 @@
     <div class="container">
         <header class="title">
             <nav>
-                <ul>
-                    <li><a href="#">My Profile</a></li> <!-- Degrees, extra skill set -->
-                    <li><a href="#">Experience</a></li><!-- Differnt skill levels, Languages -->
+                <menu>
+                    <li><a href="#profile">My Profile</a></li> <!-- Degrees, extra skill set -->
+                    <li><a href="#experience">Experience</a></li><!-- Differnt skill levels, Languages -->
                     <li><a href="#">Personal Strength</a></li><!-- honesty, Follows routine, goal concieuos -->
                     <li><a href="#">Portfolio</a></li> <!-- pussles? -->
                     <li><a href="#">Contact</a></li> <!-- Form elements -->
-                </ul>
+                </menu>
             </nav>
     
             <h1>Welcome to my personal Portfolio page!</h1>
         </header>
         <main>
-            <section aria-label="my-profile">
-                <article>
-                    <figure>
+            <section aria-label="my-profile" id="profile">
+                
+                    <picture>
                         <img src="img/minAvatar.jpg" alt="my avatar">
-                        <figcaption>My Avatar</figcaption>
-                    </figure>
-                    <header>
-                        <h2>About me</h2>
+                        
+                    </picture>
+                    <article>
+                        <h2>Who I am</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quo saepe quam voluptate eligendi maxime quas molestiae itaque voluptatem provident cupiditate id, nostrum, magni ipsum, tempore voluptas sed culpa. Rerum!</p>
-                    </header>
-                </article>
+                    </article>
+                
+            </section>
+            <section id="experience">
+                <h2>Experience Levels</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Intermediate</th> 
+                            <th>Beginner</th>
+                            <th>Forgotten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>C#</td>
+                            <td>Phyton</td>
+                        </tr>
+                        <tr>
+                            <td>Git</td>
+                            <td>SQL</td>
+                        </tr>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Agile</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="portfolio">
+
+                <figure>
+                    <img src="portfolioImgsEx/bigbots-THUMB.png" alt="">
+                    <figcaption>Bigbots</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/food-stand-THUMB.jpg" alt="">
+                    <figcaption>Food Stand</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/GOL-THUMB.jpg" alt="">
+                    <figcaption>GOL</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/Hamilton-Thumb.jpg" alt="">
+                    <figcaption>Hamilton</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/jewelguardian-THUMB.jpg" alt="">
+                    <figcaption>Jewel Guardian</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/mario-madness-THUMB.jpg" alt="">
+                    <figcaption>Mario Madness</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/mondo-disneyafternoon-THUMB-2.jpg" alt="">
+                    <figcaption>Mondo Disney Afternoon</figcaption>
+                </figure>
+                <figure>
+                    <img src="portfolioImgsEx/spooky-space-kook-THUMB.jpg" alt="">
+                    <figcaption>Spooky Space Kook</figcaption>
+                </figure>
             </section>
         </main><aside></aside>
         <footer></footer>
