@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0; /* em */
     padding: 0; /* em: media queries */
     box-sizing:border-box;
@@ -11,12 +11,18 @@
     max-width: 100vw;
     color: hsl(85, 14%, 42%);
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 nav{
+    margin: 2em;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    z-index: 1;
+    width: 100vw;
 }
 nav menu li {
     display: inline-block;
@@ -43,11 +49,12 @@ a:hover{
     text-align: center;
 }
 h1{
-    margin: 0.67em;
+    flex-basis: 100%;
+    margin-top: 0.73em;
     padding: 0.5ch;
 }
 #profile{
-    margin-top: 8em;
+    /* margin-top: 8em; */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -60,12 +67,9 @@ picture {
    
 }
 picture img {
-  display: inline-block;
-    width: 325px;
-    height: 500px;
+    width: 299px;
+    height: 434px;
     object-fit: cover;
-   
-    
 }
 article{
     flex-basis: 60%;
@@ -74,9 +78,12 @@ article{
 article p{
     padding: 1ch;
 }
-h2{
+h2:not(.sub-title){
     text-align: center;
-    padding: 0.5ch;
+    margin-top: 5em;
+}
+.sub-title {
+    text-align: center;
 }
 #experience {
     display: flex;
@@ -85,11 +92,19 @@ h2{
 }
 figcaption {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     padding: 0.5ch;
+    background-color: hsl(0, 33%, 70%);
+    border-radius: 0 0 0.94em 0.94em;
+    outline: 0.33em solid hsl(281, 22%, 71%);
 }
 table {
+    position: absolute;
     width: 45ch;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.63em;
 }
 td, th {
     padding: 0.5ch;
@@ -104,9 +119,11 @@ td, th {
     flex-basis: 100%;
 }
 figure img{
-    border-radius: 0.94em;
+    padding-bottom: 0;
+    border-radius: 0.94em 0.94em 0 0;
     width: 23vw;
     max-height: 18.75em;
+    outline: 0.33em solid hsl(281, 22%, 71%);
 }
 figure {
     margin-top: 2em;
@@ -125,9 +142,16 @@ form {
     display: flex;
     align-items: center;
     flex-direction: column;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+    padding: 0.63em;
+    position: absolute;
 }
 legend {
     font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1em;
 }
 textarea {
     font-size: 1rem;
@@ -158,10 +182,28 @@ textarea::placeholder{
     color: hsl(204, 22%, 29%) ;
 }
 small{
-    color: #F3F0ED;
+    display: inline-block;
+    color: hsl(29, 54%, 20%);
     display: flex;
     justify-content: center;
+    margin: 1em;
 }
 footer{
+    display: flex;
     padding: auto;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0%;
+    right: 17%;
+    transform: translate(-50%, -50%);
+}
+textarea, input {
+    outline: 0.33em solid hsl(281, 22%, 71%);
+}
+section{
+    position: relative;
+    overflow: hidden;
+    /* padding: 3em; */
+    height: 100vh;
+    outline: auto;
 }
