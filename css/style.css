@@ -2,7 +2,7 @@
     margin: 0; /* em */
     padding: 0; /* em: media queries */
     box-sizing:border-box;
-    outline: auto red; 
+    /* outline: auto red;  */
 }
 .container {
     background: url("../img/Landskap.png") no-repeat center center fixed;
@@ -13,7 +13,7 @@
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 nav menu li {
@@ -22,16 +22,23 @@ nav menu li {
     margin: 0.63em 1.25em; /* Based on it's own font-size */
 }
 nav menu li a{
+    color: hsl(204, 22%, 71%);
     text-decoration: none;
     font-size: 1.13rem;
     position: relative;
 }
+a:hover{
+    color:hsl(54, 22%, 71%);
+}
+
 p {
     max-width: 75ch;
 }
 .title {
+    
     font-size: 1.88rem; /* 30px */
     margin-top: 0.67em; /* 20px/30px base */
+    text-align: center;
 }
 h1{
     margin-top: 0.67em;
@@ -39,7 +46,7 @@ h1{
 }
 #profile{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 picture {
@@ -78,20 +85,20 @@ td, th {
 }
 #portfolio{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 #portfolio h2 {
     flex-basis: 100%;
 }
 figure img{
-
+    border-radius: 0.94em;
     width: 23vw;
     max-height: 18.75em;
 }
 figure {
     margin-top: 2em;
-    border-radius: 0.94em;
+    
 }
 details {
     border-radius: 0.25em;
@@ -102,8 +109,47 @@ summary{
 details[open] {
     width: 23vw;
 }
-#form {
+form {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+legend {
+    font-size: 1.5rem;
+}
+textarea {
+    font-size: 1rem;
+    line-height: 1;
+    padding: 1ch;
+    transition: all 0.3s; /* Properties changes */
+    outline: none;
+    border-radius: 0.94em;
+    width: 45ch;
+}
+input {
+    font-size: 1rem;
+    line-height: 1;
+    padding: 1ch;
+    width: 45ch;
+    border-radius: 0.94em;
+}
+textarea, input{
+    background-color: hsl(24, 22%, 71%);
+    border: transparent;
+    margin: 1ch;
+    color: hsl(204, 22%, 29%);
+}
+input[type="email"]::-webkit-input-placeholder{
+    color: hsl(204, 22%, 29%) ;
+}
+textarea::placeholder{
+    color: hsl(204, 22%, 29%) ;
+}
+small{
+    color: #F3F0ED;
+    display: flex;
+    justify-content: center;
+}
+footer{
+    padding: auto;
 }
