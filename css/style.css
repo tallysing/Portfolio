@@ -16,7 +16,7 @@
 }
 nav{
     margin: 2em;
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -80,7 +80,7 @@ article p{
 }
 h2:not(.sub-title){
     text-align: center;
-    margin-top: 5em;
+    margin-top: 3em;
 }
 .sub-title {
     text-align: center;
@@ -140,7 +140,7 @@ details[open] {
 }
 form {
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     top: 45%;
     left: 50%;
@@ -162,12 +162,18 @@ textarea {
     border-radius: 0.94em;
     width: 45ch;
 }
-input {
+input:not(input[type="submit"]) {
     font-size: 1rem;
     line-height: 1;
     padding: 1ch;
     width: 45ch;
     border-radius: 0.94em;
+}
+input[type="submit"]{
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.94em;
+    right: 0;
 }
 textarea, input{
     background-color: hsl(24, 22%, 71%);
@@ -188,7 +194,7 @@ small{
     justify-content: center;
     margin: 1em;
 }
-footer{
+footer{ /* Positioning the footer and it's content */
     display: flex;
     padding: auto;
     justify-content: flex-end;
@@ -203,7 +209,6 @@ textarea, input {
 section{
     position: relative;
     overflow: hidden;
-    /* padding: 3em; */
     height: 100vh;
     outline: auto;
 }
