@@ -13,7 +13,7 @@
                 <menu>
                     <li><a href="#profile">My Profile</a></li> <!-- Degrees, extra skill set -->
                     <li><a href="#experience">Experience</a></li><!-- Differnt skill levels, Languages -->
-                    <li><a href="#">Personal Strength</a></li><!-- honesty, Follows routine, goal concieuos -->
+                 <!--   <li><a href="#">Personal Strength</a></li>--><!-- honesty, Follows routine, goal concieuos -->
                     <li><a href="#portfolio">Portfolio</a></li> <!-- pussles? -->
                     <li><a href="#contact">Contact</a></li> <!-- Form elements -->
                 </menu>
@@ -27,13 +27,15 @@
         </header>
                 
                     <picture>
-                        
-                        <img src="img/avatar14.png" alt="my avatar" width="auto" height="auto" >
-                        
+                        <source media="(min-width: 320px)" srcset="img/avatar_Mobile.png">
+
+                        <source media="(min-width: 961px)" srcset="img/avatar14.png">
+                       
+                        <img src="img/hr.PNG" alt="">
                     </picture>
                     <article>
                         <h2 class="sub-title">Who I am</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quo saepe quam voluptate eligendi maxime quas molestiae itaque voluptatem provident cupiditate id, nostrum, magni ipsum, tempore voluptas sed culpa. Rerum!</p>
+                        <p>My name is Sally Huynh, I'm a student in Lexicon's program for developer specializing in React, amateur cook, gardener, tinkerer, and just a curious person. I'm from Örebro and live in Malmö. Currently looking for an internship. I'm fluent in Swedish and good in English.</p>
                     </article>
                 
             </section>
@@ -45,14 +47,12 @@
                         <tr>
                             <th>Intermediate</th> 
                             <th>Beginner</th>
-                            <th>Forgotten</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>JavaScript</td>
                             <td>C#</td>
-                            <td>Phyton</td>
                         </tr>
                         <tr>
                             <td>Git</td>
@@ -64,6 +64,19 @@
                         </tr>
                         <tr>
                             <td>CSS</td>
+                            <td>Scrum</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>TypeScript</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>React</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>React Native</td>
                         </tr>
                     </tbody>
                 </table>
@@ -72,44 +85,34 @@
 
                 <h2>Past Projects</h2>
                 <figure>
-                    <img src="portfolioImgsEx/bigbots-THUMB.png" alt="">
+                    <img src="img/Moody_diagram.PNG" alt="">
                     <figcaption> <details>
-                        <Summary>Bigbots</Summary>
+                        <Summary>Mood tracker</Summary>
                         <p>
-                            Requires a computer running an operating system. The computer must have some
-                            memory and ideally some kind of long-term storage. An input device as well
-                            as some form of output device is recommended.
-                          </p>
+                            Mood tracker is an application I created to display an overview of an user's well-being overtime. It was written in Swedish. You can check the source code <a href="https://github.com/tallysing/mood" target="_blank" >here</a>.
+                        </p>
                     </details></figcaption>
                 </figure>
                 <figure>
-                    <img src="portfolioImgsEx/food-stand-THUMB.jpg" alt="">
-                    <figcaption>Food Stand</figcaption>
-                </figure>
-                <figure>
-                    <img src="portfolioImgsEx/GOL-THUMB.jpg" alt="">
-                    <figcaption>GOL</figcaption>
-                </figure>
-                <figure>
                     <img src="portfolioImgsEx/Hamilton-Thumb.jpg" alt="">
-                    <figcaption>Hamilton</figcaption>
+                    <figcaption>
+                        <details>
+                            <Summary>Asset Tracking</Summary>
+                            <p>A simple console application that tracks your technical resources. You can check the source code <a target="_blank" href="https://github.com/tallysing/Asset_tracker_with_database">here</a></p>
+                        </details>
+                    </figcaption>
                 </figure>
                 <figure>
                     <img src="portfolioImgsEx/jewelguardian-THUMB.jpg" alt="">
-                    <figcaption>Jewel Guardian</figcaption>
+                    <figcaption>
+                        <details>
+                            <Summary>CV</Summary>
+                            <p>I made a simple CV page using only HTML and CSS. You can check the source code <a target="_blank" href="https://github.com/tallysing/CV-page">here</a></p>
+                        </details>
+                        
+                    </figcaption>
                 </figure>
-                <figure>
-                    <img src="portfolioImgsEx/mario-madness-THUMB.jpg" alt="">
-                    <figcaption>Mario Madness</figcaption>
-                </figure>
-                <figure>
-                    <img src="portfolioImgsEx/mondo-disneyafternoon-THUMB-2.jpg" alt="">
-                    <figcaption>Mondo Disney Afternoon</figcaption>
-                </figure>
-                <figure>
-                    <img src="portfolioImgsEx/spooky-space-kook-THUMB.jpg" alt="">
-                    <figcaption>Spooky Space Kook</figcaption>
-                </figure>
+                
             </section>
             <section id="contact">
                 <form action="" method="post">
