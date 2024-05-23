@@ -53,6 +53,7 @@ td, th {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: baseline;
 }
 #portfolio h2 {
     flex-basis: 100%;
@@ -61,13 +62,13 @@ figure img{
     padding-bottom: 0;
     border-radius: 0.94em 0.94em 0 0;
     width: 18em;
-    /* height: 15em; */
+    height: 18em;
     outline: 0.33em solid hsl(281, 22%, 71%);
 }
 figure {
-    margin-top: 2em;
-    
+    /* margin-top: 2em; */
 }
+
 figure:hover{
     cursor: pointer;
 }
@@ -155,7 +156,7 @@ section{
 }
 
 
-@media screen and (max-width:912px) {
+/* @media screen and (max-width:912px) {
     .container {
         background: url(../img/Landscape_Tablet_phone.png) no-repeat center center fixed;
         max-width: 100vw;
@@ -207,7 +208,7 @@ section{
       transform: translate(-50%, -50%);
       padding: 0.63em;
     }
-}
+} */
 @media screen and (min-width:961px){
     .title {
         font-size: 1.88rem; /* 30px */
@@ -270,3 +271,12 @@ section{
         color:hsl(54, 22%, 71%);
     }
 }
+
+@media only screen and (min-width: 1224px) {
+    /* Styles for desktops and laptops */
+}
+
+@media only screen and (min-width: 1824px) {
+    /* Styles for large screens */
+}
+   
