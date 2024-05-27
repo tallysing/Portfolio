@@ -14,6 +14,7 @@ h1{
 
 article {
     max-width: 75ch;
+    padding: 1em;
 }
 
 
@@ -29,7 +30,8 @@ h2:not(.sub-title){
     align-items: center;
     flex-direction: column;
 }
-figcaption {
+
+.project_caption {
     display: flex;
     justify-content: left;
     padding: 0.5ch;
@@ -37,6 +39,7 @@ figcaption {
     border-radius: 0 0 0.94em 0.94em;
     outline: 0.33em solid hsl(281, 22%, 71%);
 }
+
 table {
     position: absolute;
     width: 45ch;
@@ -51,22 +54,33 @@ td, th {
 }
 #portfolio{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: baseline;
+    align-content: flex-start;
 }
 #portfolio h2 {
     flex-basis: 100%;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
-figure img{
+
+.project_img {
     padding-bottom: 0;
     border-radius: 0.94em 0.94em 0 0;
     width: 18em;
     height: 18em;
     outline: 0.33em solid hsl(281, 22%, 71%);
 }
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
 figure {
-    /* margin-top: 2em; */
+    margin: 1em;
+    padding: 1em;
 }
 
 figure:hover{
@@ -81,55 +95,23 @@ summary{
 details[open] {
     width: 17em;
 }
-form {
+
+.social_media {
     display: flex;
-    align-items: left;
-    flex-direction: column;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -53%);
-    padding: 0.63em;
-    position: absolute;
+    list-style: none;
+    justify-content: center;
 }
-legend {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 1em;
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-textarea {
-    font-size: 1rem;
-    line-height: 1;
-    padding: 1ch;
-    transition: all 0.3s; /* Properties changes */
-    outline: none;
-    border-radius: 0.94em;
-    width: 45ch;
+
+.email figcaption {
+    margin: 1em;
 }
-input:not(input[type="submit"]) {
-    font-size: 1rem;
-    line-height: 1;
-    padding: 1ch;
-    width: 45ch;
-    border-radius: 0.94em;
-}
-input[type="submit"]{
-    display: block;
-    padding: 0.5em;
-    border-radius: 0.94em;
-    right: 0;
-}
-textarea, input{
-    background-color: hsl(24, 22%, 71%);
-    border: transparent;
-    margin: 1ch;
-    color: hsl(204, 22%, 29%);
-}
-input[type="email"]::-webkit-input-placeholder{
-    color: hsl(204, 22%, 29%) ;
-}
-textarea::placeholder{
-    color: hsl(204, 22%, 29%) ;
-}
+
 small{
     display: inline-block;
     color: hsl(29, 54%, 20%);
@@ -146,9 +128,7 @@ footer{ /* Positioning the footer and it's content */
     right: 17%;
     transform: translate(-50%, -50%);
 }
-textarea, input {
-    outline: 0.33em solid hsl(281, 22%, 71%);
-}
+
 section{
     position: relative;
     overflow: hidden;
@@ -209,74 +189,88 @@ section{
       padding: 0.63em;
     }
 } */
-@media screen and (min-width:961px){
-    .title {
-        font-size: 1.88rem; /* 30px */
-        margin-top: 0.67em; /* 20px/30px base */
-        text-align: center;
-        grid-column: 1/4;
-    }
-    .container {
-        background:url("../img/Landscape_PC.png") no-repeat center center fixed;
-        max-width: 100vw;
-        color: hsl(85, 14%, 42%);
-        background-size: cover;
-        /* display: flex;
-        flex-direction: column; */
-        display: grid;
-        grid-auto-flow: row;
-        overflow: hidden;
-    }
-    #profile{
-        display: grid;
-        position: relative;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 3em;
-        justify-content: space-between;
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-    picture {
-        grid-column: 1 / 1;
-        display: flex;
-        justify-content: right;
-        align-self: self-end;
-        justify-self: end;
-    }
-    picture img {
-        width: 299px;
-        height: 434px;
-        object-fit: cover;
-    }
+
+.title {
+    font-size: 1.88rem; /* 30px */
+    margin-top: 0.67em; /* 20px/30px base */
+    text-align: center;
     
-    nav{
-        margin: 2em;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100vw;
-    }
-    nav menu li {
-        display: inline-block;
-        list-style: none;
-        margin: 0.63em 1.25em; /* Based on it's own font-size */
-    }
-    nav menu li a{
-        color: hsl(204, 22%, 71%);
-        text-decoration: none;
-        font-size: 1.13rem;
-        position: relative;
-    }
-    a:hover{
-        color:hsl(54, 22%, 71%);
-    }
+    grid-column: 1/4;
 }
 
-@media only screen and (min-width: 1224px) {
-    /* Styles for desktops and laptops */
+h1 {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+
+   
+
+.container {
+    background:url("../img/Landscape_PC.png") no-repeat center center fixed;
+    max-width: 100vw;
+    color: hsl(85, 14%, 42%);
+    background-size: cover;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-auto-flow: row;
+    overflow: hidden;
+}
+#profile{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3em;
+    justify-content: space-between;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+picture {
+    grid-column: 1 / 1;
+    display: flex;
+    justify-content: right;
+    align-self: self-end;
+    justify-self: end;
+}
+picture img {
+    width: 299px;
+    height: 434px;
+    object-fit: cover;
 }
 
-@media only screen and (min-width: 1824px) {
-    /* Styles for large screens */
+nav{
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+nav menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 0.63em 1.25em; /* Based on it's own font-size */
+}
+nav menu li a{
+    color: hsl(204, 22%, 71%);
+    text-decoration: none;
+    font-size: 1.13rem;
+    position: relative;
+}
+a:hover{
+    color:hsl(54, 22%, 71%);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles for smartphones */
+    
+    .container {
+        background:url("../img/mobile_background.png") no-repeat center center fixed;
+    }
+
+    nav menu {
+        display: none;
+    }
 }
    
