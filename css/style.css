@@ -5,9 +5,31 @@
     /* outline: auto red;  */
 }
 
+body {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #333; */
+}
+
+html{
+	box-sizing: border-box;
+}
+
+*, *:after,*:before{
+	box-sizing: border-box;
+}
+
+
+
+.device {
+    display: none;
+}
 
 h1{
-    
+  overflow: hidden;
+  text-overflow: clip; 
     margin-top: 0.73em;
     padding: 0.5ch;
 }
@@ -76,6 +98,7 @@ td, th {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100dvh;
 }
  
 figure {
@@ -130,7 +153,7 @@ footer{ /* Positioning the footer and it's content */
 }
 
 section{
-    position: relative;
+    /* position: absolute; */
     overflow: hidden;
     height: 100vh;
 }
@@ -198,12 +221,6 @@ section{
     grid-column: 1/4;
 }
 
-h1 {
-    overflow: hidden;
-    text-overflow: clip;
-    white-space: nowrap;
-  }
-
 
    
 
@@ -267,10 +284,269 @@ a:hover{
     
     .container {
         background:url("../img/mobile_background.png") no-repeat center center fixed;
+        max-width: 100dvw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     nav menu {
         display: none;
     }
+
+    section {
+      /* overflow: hidden; */
+      overflow-y: scroll;
+      max-height: 100dvh;
+      max-height: fit-content;
+    }
+
+    /* main {
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: auto;
+      flex-direction: column;
+      gap: 1em;
+      justify-content: center;
+  
+    }
+   */
+   
+
+    #profile {
+      justify-content: flex-start;  
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  }
+
+  table {
+    position: absolute;
+    width: 15ch;
+    top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.63em;
+}
+
+picture {
+  align-self: center;
+}
+
+article{
+  grid-area: article;
+  padding: 1em;
+  margin: 1em;
+  background-color: hsl(24, 22%, 71%);
+  border-radius: 0.94em;
+}
+
+picture img{
+
+  width: 230px;
+  height: 334px;
+  object-fit: cover;
+}
+
+#portfolio {
+  /* flex-direction: column; */
+  max-width: 100dvw;
+  /* position: relative; */
+  /* flex-wrap: wrap; */
+  overflow: visible;
+  flex-flow:  wrap;
+  margin-bottom: 1em;
+  /* max-height: 200dvh; */
+  /* z-index: 1; */
+}
+
+#portfolio h2 {
+  display: inline-block;
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+#portfolio figure {
+  flex-basis: 100%;
+}
+
+.project_caption {
+  width: 18em;
+}
+
+footer {
+  right: auto;
+  transform: none;
+}
+
+ 
+.device {
+        display: contents;
+        position: relative;
+        width: 300px;
+        height: 600px;
+      }
+      
+      .box {
+        position: absolute;
+        top: 0; right: 0;
+        bottom: 0; left: 0;
+        overflow: hidden;
+      }
+      
+      .navTrigger {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        width: 36px;
+        height: 36px;
+        background: none;
+        border: 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        -webkit-appearence: none;
+        -webkit-tap-highlight-color: transparent;
+        &:focus {
+          outline: none;
+        }
+        svg {
+          width: 64px;
+          height: 48px;
+          top: -6px;
+          left: -14px;
+          stroke: hsl(85, 14%, 42%);;
+          stroke-width: 4px;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          fill: none;
+          display: block;
+          position: absolute;
+          path {
+            transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+            stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+            stroke-dashoffset: var(--offset, 126px);
+            transform: translateZ(0);
+            &:nth-child(2) {
+              --duration: .7s;
+              --easing: ease-in;
+              --offset: 100px;
+              --array-2: 74px;
+            }
+            &:nth-child(3) {
+              --offset: 133px;
+              --array-2: 107px;
+            }
+          }
+        }
+        &.active {
+          svg {
+            stroke: var(--white);
+            path {
+              --offset: 57px;
+              &:nth-child(1),
+              &:nth-child(3) {
+                --delay: .15s;
+                --easing: cubic-bezier(.2, .4, .2, 1.1);
+              }
+              &:nth-child(2) {
+                --duration: .4s;
+                --offset: 2px;
+                --array-1: 1px;
+              }
+              &:nth-child(3) {
+                --offset: 58px;
+              }
+            }
+          }
+        }
+      }
+      
+      .navMenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        /* background: #FFF; */
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: all .375s;
+        &.active {
+          position: fixed;  
+          opacity: 1;
+          z-index: 100;
+          visibility: visible;
+          &::before {
+            transform: skew(-14deg) translateX(0);
+          }
+          li {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        &::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: -15px;
+          background: #28a752;
+          transform-origin: 0 0;
+          transform: skew(-14deg) translateX(-120%);
+          transition: all .275s .1s;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          display: inline-flex;
+          flex-direction: column;
+          height: 93%; /* Should be 100%, but we have a notice message :D */
+          align-items: flex-end;
+          justify-content: center;
+          transform: translateX(-18%) skew(-16deg);
+          li {
+            display: block;
+            margin: .5rem 0;
+            text-align: right;
+            opacity: 0;
+            transform: translateY(-10px);
+            a {
+              position: relative;
+              left: 0;
+              display: block;
+              padding: 12px 0;
+              color: var(--white);
+              font-size: 1.4em;
+              text-decoration: none;
+              transform: skew(16deg);
+              transition: .25s;
+              &:hover {
+                left: 10px;
+              }
+            }
+            &:nth-child(1) {
+              transition: all 275ms 275ms;
+            }
+            &:nth-child(2) {
+              transition: all 275ms 325ms;
+            }
+            &:nth-child(3) {
+              transition: all 275ms 375ms;
+            }
+            &:nth-child(4) {
+              transition: all 275ms 425ms;
+            }
+            &:nth-child(5) {
+              transition: all 275ms 475ms;
+            }
+          }
+        }
+      }
 }
    
