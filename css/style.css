@@ -157,7 +157,7 @@ footer{ /* Positioning the footer and it's content */
 section{
     /* position: absolute; */
     overflow: hidden;
-    height: 100vh;
+    min-height: 100dvh;
 }
 
 
@@ -299,8 +299,7 @@ a:hover{
     section {
       /* overflow: hidden; */
       overflow-y: scroll;
-      max-height: 100dvh;
-      max-height: fit-content;
+      /* min-height: 100dvh; */
       position: relative;
     }
 
