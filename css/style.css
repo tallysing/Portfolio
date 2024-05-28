@@ -2,15 +2,13 @@
     margin: 0; /* em */
     padding: 0; /* em: media queries */
     box-sizing:border-box;
-    /* outline: auto red;  */
 }
 
 body {
-    min-height: 90vh;
+    min-height: 90dvh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: #333; */
 }
 
 html{
@@ -43,7 +41,9 @@ article {
 h2:not(.sub-title){
     text-align: center;
     margin-top: 3em;
+    margin-bottom: 1em;
 }
+
 .sub-title {
     text-align: center;
 }
@@ -64,11 +64,11 @@ h2:not(.sub-title){
 }
 
 table {
-    position: absolute;
+    /* position: absolute; */
     width: 45ch;
-    top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   padding: 0.63em;
 }
 td, th {
@@ -322,13 +322,12 @@ a:hover{
       position: relative;
   }
 
+
+
   table {
-    position: absolute;
     width: 15ch;
     top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.63em;
 }
 
 picture {
@@ -351,15 +350,10 @@ picture img{
 }
 
 #portfolio {
-  /* flex-direction: column; */
   max-width: 100dvw;
-  /* position: relative; */
-  /* flex-wrap: wrap; */
   overflow: visible;
   flex-flow:  wrap;
   margin-bottom: 1em;
-  /* max-height: 200dvh; */
-  /* z-index: 1; */
 }
 
 #portfolio h2 {
